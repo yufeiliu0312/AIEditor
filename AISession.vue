@@ -84,16 +84,6 @@ const handlerTyped = () => {
     showCursor: false,
     onComplete: () => {
       flippingLogo.value = false
-      // if (outputContentDivRef.value) {
-      //   const code = `<pre>
-      //       <code class="language-sql">
-      //         ${aiOutputContent}
-      //       </code>
-      //     </pre>
-      //   `
-      //   outputContentDivRef.value.innerHTML = code
-      //   hljs.highlightAll();
-      // }
     }
   });
 }
@@ -218,12 +208,6 @@ defineExpose({ focus: () => AiInputComponentRef.value?.focus() })
       </div>
     </div>
     <div class="mt-3 pl-11">
-      <!-- <v-btn class="ml-2 btn-action" size="small" variant="outlined">
-        {{ $t('global.copy') }}
-      </v-btn> -->
-      <!-- <v-btn class="ml-2 btn-action" size="small" variant="outlined">
-        {{ $t('global.save') }}
-      </v-btn> -->
       <v-btn class="ml-2 btn-action" size="small" variant="outlined" @click="onSendMeseageToAI()">
         {{ $t('global.codeCompletion') }}
       </v-btn>
